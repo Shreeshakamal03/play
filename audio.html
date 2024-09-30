@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Audio and Video</title>
+        <script>
+            function loader(){
+                var vid=document.getElementById("myVideo");
+                vid.loop=true;
+                vid.load();
+                vid=document.getElementById("myAudio");
+                vid.loop=true;
+                vid.load();
+            }
+        </script>
+    </head>
+    <body onLoad="loader();">
+        <div>
+            <audio width="300" height="200" controls id="myAudio">
+                <source src="abcd.mp3" type="audio/mp3"/>
+                Your browser does not support the <audio> element.
+            </audio>
+        </div>
+        <div>
+            <video width="300" height="200" id="myVideo" controls>
+                <source src="abcd.mp4" type="video/mp4"/>
+                Your browser does not support the <video> element.
+            </video>
+        </div>
+    </body>
+</html>
